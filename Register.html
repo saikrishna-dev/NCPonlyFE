@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'>
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'><link rel="stylesheet" href="./registerstyle.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 bg-login">
+        <img src="" alt="">
+        <div class="content">
+          <h1 class="brand">Keep an Eye</h1>
+          <span>Your Property</span> <br>
+          <span>Our Responsibility !</span>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-4 login-area">
+        <form action="login.html">
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                  <i class="fas fa-paper-plane"></i>
+                </span>
+              </div>
+              <input type="email" class="form-control" placeholder="Email ID" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                   <i class="fas fa-key"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="p1" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                   <i class="fas fa-lock"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control" placeholder="Confirm Password" onmouseout="check()" aria-label="Password" aria-describedby="basic-addon1" id="p2">
+            </div>
+          </div>
+
+
+          <button type="submit" id="rebtn" class="btn btn-dark btn-block" style="display: block;" >Register</button>
+          <span id="e"style="display: none;color: red;">Passwords didnt match</span>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+</body>
+</html>
+<script>
+  function check(){
+    var p=document.getElementById('p1').value;
+    var cp=document.getElementById('p2').value;    
+    if(p != cp){
+      document.getElementById('e').style.display= "block";
+      document.getElementById('rebtn').disabled=true;
+    }
+    else{
+      document.getElementById('e').style.display= "none";
+      document.getElementById('rebtn').disabled=false;
+
+    }
+  }
+</script>
+<style>
+  .container-fluid{
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.bg-login{
+  background: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-repeat: no-repeat;
+}
+
+h1{
+  font-size: 50px !important;  
+}
+
+.login-area{
+  background-color: #fff;
+  height: 100vh;
+}
+
+.input-group-text i {
+  font-size: 13px !important;
+  color: #777;
+  text-align: center;
+}
+
+.input-group-text{
+  width: 40px !important;
+  background-color: #f4f4f4 !important;
+}
+
+input, .input-group-text{
+  border: 1px solid #f0f0f0 !important;
+}
+
+button{
+  font-weight: 600 !important;
+}
+
+.content, form {
+  position: relative;
+  top: 30vh;
+  padding: 0 30px;
+}
+
+.content .brand{
+  margin-bottom: 20px;
+  color: #fff
+}
+.content span {
+  font-weight: 600;
+  color: #edd;
+}
+
+@media (min-width: 300px) and (max-width: 12000px) {
+  .bg-login { display: block}
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+  .bg-login { display: none}
+}
+</style>
